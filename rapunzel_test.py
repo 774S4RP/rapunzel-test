@@ -36,11 +36,13 @@ for i, item in enumerate(questions, start=1):
 # Asıl sonucu belirleyen gizli sorular
 partner_q1 = st.radio("Sevgilin var mı?", ["Evet", "Hayır"], key="partner_exists")
 partner_q2 = st.radio("Sevgilinin adı S harfi ile mi başlıyor?", ["Evet", "Hayır"], key="partner_name_s")
+partner_q3 = st.radio("Sevgilini seviyorsun mu?", ["Evet", "Hayır"], key="partner_love")
 
 # Sonuç
 if st.button("Sonucu Gör ✨"):
-    if partner_q1 == "Evet" and partner_q2 == "Evet":
+    if partner_q1 == "Evet" and partner_q2 == "Evet" and partner_q3 == "Evet":
         st.success("💜 Sen %100 Sevgilinin minik tatli prensesi ve Rapunzelisin 👸✨")
         st.balloons()
     else:
         st.info("Rapunzel olmak için bazı koşullar eksik gibi 😉")
+
